@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:orm_note_app/Screen/main_screen.dart';
+import 'package:orm_note_app/Screen/memo_screen.dart';
 
 final router = GoRouter(
   initialLocation: '/', // 원래 / 이거 주소로 못쓰는데 쓸려고
@@ -8,6 +9,10 @@ final router = GoRouter(
     GoRoute(
       path: '/', // initialLocation이거 해서 사용가능
       builder: (context, state) => const MainScreen(),
+    ),
+    GoRoute(
+      path: '/memo_screen', // initialLocation이거 해서 사용가능
+      builder: (context, state) => const MemoScreen(),
     ),
   ],
 );
